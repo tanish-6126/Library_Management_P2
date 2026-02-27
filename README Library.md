@@ -21,7 +21,7 @@ This project demonstrates the implementation of a Library Management System usin
 
 ### 1. Database Setup
 
-![ERD](https://github.com/tanish-6126/Library_Management_P2/blob/main/EER Diagram Library.png)
+![ERD](https://github.com/tanish-6126/Library_Management_P2/blob/main/EER_Diagram.png)
 
 - **Database Creation**: Created a database named `library_db`.
 - **Table Creation**: Created tables for branches, employees, members, books, issued status, and return status. Each table includes relevant columns and relationships.
