@@ -308,6 +308,8 @@ on a.issued_id = b.issued_id) c
 where c.return_date is null;
 ```
 -- Before Performing advance tasks ,we are adding some more details..
+
+```sql
 INSERT INTO issued_status
 (issued_id, issued_member_id, issued_book_name, issued_date, issued_book_isbn, issued_emp_id)
 VALUES
@@ -316,7 +318,11 @@ VALUES
 ('IS153', 'C106', 'Pride and Prejudice', CURRENT_DATE - INTERVAL 7 DAY,  '978-0-14-143951-8', 'E107'),
 ('IS154', 'C105', 'The Road',CURRENT_DATE - INTERVAL 32 DAY, '978-0-375-50167-0', 'E101');
 
+```
+
 -- Adding new column in return_status
+
+```sql
 ALTER TABLE return_status
 ADD Column book_quality VARCHAR(15) DEFAULT('Good');
 
@@ -324,6 +330,7 @@ UPDATE return_status
 SET book_quality = 'Damaged'
 WHERE issued_id 
     IN ('IS112', 'IS117', 'IS118');
+```
     
 ## Advanced SQL Operations
 
